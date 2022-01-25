@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Cryptocurrencies from "./components/CryptoCurrencies";
 import CyptoDetails from "./components/CryptoDetails";
-import Exchanges from "./components/Exchanges";
+// import Exchanges from "./components/Exchanges";
 import News from "./components/News";
 import NotFound from "./components/NotFound";
 
@@ -35,7 +35,7 @@ const App = () => {
                   path="/crypto/:coinId"
                   element={<CyptoDetails />}
                 ></Route>
-                <Route path="/exchanges" element={<Exchanges />}></Route>
+                {/* <Route path="/exchanges" element={<Exchanges />}></Route> */}
                 <Route path="/news" element={<News />}></Route>
                 <Route path="/*" element={<NotFound />}></Route>
               </Routes>

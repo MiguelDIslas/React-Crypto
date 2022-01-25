@@ -7,13 +7,16 @@ import { useGetCryptosQuery } from "../services/Api";
 import Cryptocurrencies from "./CryptoCurrencies";
 import News from './News';
 
+// Components
+import Loader from "./Loader";
+
 const { Title } = Typography;
 
 const Home = () => {
   const { data, isFetching } = useGetCryptosQuery(10);
   const globalStats = data?.data?.stats;
 
-  if (isFetching) return '';
+  if (isFetching) return <Loader />;
 
   return (
     <>

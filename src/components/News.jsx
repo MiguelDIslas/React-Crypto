@@ -6,6 +6,9 @@ import moment from "moment";
 import { useGetCryptoNewsQuery } from "../services/NewsApi";
 import { useGetCryptosQuery } from "../services/Api";
 
+// Components
+import Loader from "./Loader";
+
 const { Text, Title } = Typography;
 const { Option } = Select;
 const demoImage =
@@ -22,7 +25,7 @@ const News = ({ simplified }) => {
     count: count,
   });
 
-  if (!cryptoNews?.value) return "Loading";
+  if (!cryptoNews?.value) return <Loader />;
 
   return (
     <>

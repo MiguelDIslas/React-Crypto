@@ -5,6 +5,8 @@ import millify from "millify";
 
 // Api
 import { useGetCryptosQuery } from "../services/Api";
+// Components
+import Loader from "./Loader";
 
 const Cryptocurrencies = ({ simplified }) => {
   const count = simplified ? 10 : 100;
@@ -20,7 +22,7 @@ const Cryptocurrencies = ({ simplified }) => {
     setCryptos(filteredData);
   }, [cryptosList, searchTerm]);
 
-  if (isFetching) return "Loading";
+  if (isFetching) return <Loader />;
 
   return (
     <>
