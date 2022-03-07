@@ -9,7 +9,7 @@ import {
   FundOutlined,
   MenuOutlined,
 } from "@ant-design/icons";
-const iconApp = require("../../images/cryptocurrency.png");
+const iconApp = require("../../images/title.png");
 
 const Navbar = () => {
 
